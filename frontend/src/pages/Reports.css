@@ -1,0 +1,146 @@
+.reports-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.reports-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.reports-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.reports-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chart-card {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.chart-wide {
+  grid-column: span 2;
+}
+
+.chart-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.report-summary {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.report-summary h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-item {
+  background: var(--bg-tertiary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+}
+
+.summary-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+.summary-item p {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Recharts custom styling */
+.recharts-wrapper {
+  font-family: inherit;
+}
+
+.recharts-text {
+  fill: var(--text-secondary);
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: var(--text-secondary);
+}
+
+.recharts-legend-item-text {
+  color: var(--text-primary) !important;
+}
+
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .reports-container {
+    padding: 1rem;
+  }
+
+  .reports-header h1 {
+    font-size: 2rem;
+  }
+
+  .chart-card {
+    padding: 1.5rem;
+  }
+
+  .report-summary {
+    padding: 1.5rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
